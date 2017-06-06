@@ -1,0 +1,257 @@
+% abtex2-modelo-artigo.tex, v-1.9.2 laurocesar
+% Copyright 2012-2014 by abnTeX2 group at http://abntex2.googlecode.com/ 
+%
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Artigo Acadêmico em conformidade com
+% ABNT NBR 6022:2003: Informação e documentação - Artigo em publicação 
+% periódica científica impressa - Apresentação
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+
+\documentclass[
+	% -- opções da classe memoir --
+	article,			% indica que é um artigo acadêmico
+	11pt,				% tamanho da fonte
+	oneside,			% para impressão apenas no verso. Oposto a twoside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE % títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	sumario=tradicional
+	]{abntex2}
+
+
+% ---
+% PACOTES
+% ---
+
+% ---
+% Pacotes fundamentais 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{nomencl} 			% Lista de simbolos
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+% ---
+		
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+		
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+% ---
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{1ª Avaliação de Interação Humano-Computador}
+\autor{
+	Antônio F. de Carvalho$^{1}$, Diego F. Sousa Lima$^{1}$\\
+	Diego de S. Vasconcelos$^{1}$, Marcio Silvano$^{1}$
+	\\
+	$^{1}$Curso Bacharelado em Sistemas de Informação -- Universidade Federal do Piauí\\
+	\texttt{\{antonio007023, diegofernando5672\}@gmail.com}\\
+	\texttt{\{diegosousa.33, marcinho944\}@hotmail.com}
+}
+
+
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={Modelo de artigo científico com abnTeX2},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{atigo científico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ---
+% Altera as margens padrões
+% ---
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+% ---
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Espaçamento simples
+\SingleSpacing
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+
+% página de titulo
+\maketitle
+
+
+% resumo em português
+% ]  				% FIM DE ARTIGO EM DUAS COLUNAS
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
+
+Todas as questões foram respondidas baseadas em \citeonline{barbosa2010interaccao}.\\
+
+\textbf{1) O impacto das Tecnologias de Informação e Comunicação (TIC’s) em nosso cotidiano é bastante notável. Elas estão se desenvolvendo em ritmo acelerado, e cada vez mais fazem parte das nossas vidas pessoais e profissionais. A evolução e a disseminação dessas tecnologias alcançaram um nível em que é difícil encontrar pessoas que ainda não tiveram direta ou indiretamente contato com elas, independente de classe social, do nível de escolaridade e do local onde moram. A respeito dessa forte presença das TIC’s em nossas vidas e em nossa sociedade, responda: (SCORE: 0,3)}
+
+\textbf{a) Em que área elas estão presentes?}
+
+Encontram-se presentes em todas as áreas do mundo, inclusive em lugares mais distantes.
+Há pessoas que creem que jamais utilizaram as Tecnologias de Informação e Comunicação, empregam em seus costumes sem perceber que trabalham ou estuda com as mesmas. Vale ressaltar as tribos indígenas, por exemplo, tem acesso as TIC's possuindo dispositivos móveis, aparelhos eletrônicos, computadores dentre outros. Isso só nos mostra o quão as TIC's vem progredindo durante esses anos, e a tendência é aumentar progressivamente.
+
+\textbf{b) O que significa ter tanta tecnologia na vida das pessoas?}
+
+A tecnologia esta alterando a vida das pessoas, tornando mais fácil a comunicação entre elas. Uma pessoa encontra-se do outro lado do mundo, caso exista computador ou seu próprio notebook com um webcam e acesso a internet, vem a ser possível a comunicação entre elas. Por conseguinte, a tecnologia usada corretamente agrega as pessoas apesar da distância entre elas
+
+\textbf{c) Quais são as consequências disso para as pessoas que as utilizam?}
+
+Uma consequência dessa tecnologia é que nossa presença física é substituída por aparelhos, Além disso, torna a sociedade cada vez mais sedentária, com o uso excessivo das redes sociais, as pessoas criam dificuldades de se relacionar pessoalmente devido submete-se tão somente de aparelhos celulares para se comunicar. 
+
+\textbf{2) Os exemplos anotados por você na questão anterior (item a) devem demonstrar o quanto as TIC's ocupam espaço nas nossas vidas. É mesmo importante reconhecermos que elas modificam não apenas o que se faz e como se faz, mas também quem as faz, quando, onde e até o por quê. Observe o texto abaixo e identifique esses elementos assinalados em negrito. (SCORE: 0,5)}
+
+\begin{quotation}
+	\textbf{\textit{"Considere um sistema de monitoramento agrícola desenvolvido para detectar o nível de umidade no cultivo de uvas (parreiral). Este sistema permite que um computador central, instalado em uma base da fazenda, monitore cada metro quadrado da plantação através de sensores instalados nas fileiras do parreiral. O sistema de tempo real pode ser acessado de qualquer lugar do Brasil pelo gerente da fazenda, ou por qualquer outro usuário, desde que o mesmo esteja cadastrado no sistema. O sistema também mantém um histórico da marcação desses níveis de umidade que é armazenado para análise de dados estatísticos. Utilizando seu smartphone, o gerente da fazenda necessitou, em certa data, de realizar um comparativo dos últimos 3 anos de implantação do sistema. O sistema encontra o referido histórico e envia o mesmo para o gerente da empresa através de "Whatsapp". Baseado nos dados recebidos, é que ele resolve reduzir a área plantada para o próximo ano".}}
+\end{quotation}
+
+O que: Sistema de monitoramento agrícola.
+
+Como: O Sistema contém um histórico da marcação desses níveis de unidade que é armazenado para analise de dados estatístico,e manuseado através de um smartphone.
+
+Quem: Computador Central.
+
+Quando: No momento em que o gerente da fazenda necessita em uma certa data, realizar um comparativo em seus ultimos três anos de implantação do sistema.
+
+Onde: Pode ser acessado em qualquer lugar do Brasil.
+Por quê: Para buscar o nível de umidade no cultivo de parreirais e comparar suas implantações do sistema.
+
+\textbf{3) Nossa bibliografia indica cinco (05) fatores de usabilidade que são utilizados como critérios de análise da qualidade de uso dos sistemas em IHC. Escolha dois deles e explique-os. (SCORE: 0,2)}
+
+Facilidade de aprendizado:  tempo e esforço necessários para que o usuário aprenda a utilizar o sistema com determinado nível de desempenho e competência.
+Eficiência : tempo necessário para conclusão de uma atividade com apoio computacional.
+
+\textbf{4) Preencha a tabela abaixo utilizando a pontuação de 0 (menor prioridade) a 5 (maior prioridade) para identificar os fatores de usabilidade (apontados na questão anterior) que devem ser privilegiados nos seguintes casos:}
+
+\textbf{a) Um sistema do Tribunal Regional Eleitoral de acompanhamento de processos online com possibilidade de edição (alteração, exclusão e demais ações) de documentos judiciais pelo funcionário específico do setor. (SCORE: 0,5)}
+
+\textbf{b) Um sistema de consulta de horários de ônibus interestaduais. (SCORE: 0,5)}
+
+\begin{table}[]
+	\centering
+	\caption{Fatores de usabilidade}
+	\label{my-label}
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		\textbf{Caso} & \textbf{\begin{tabular}[c]{@{}l@{}}Fator 1:\\ Fácil\\ recordação\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Fator 2:\\ Fácil\\ aprendizagem\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Fator 3:\\ Segurança\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Fator 4:\\ Eficiência\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Fator 5:\\ Satisfação\end{tabular}} \\ \hline
+		\textbf{A}    & 3                                                                            & 3                                                                              & 5                                                                     & 3                                                                      & 2                                                                      \\ \hline
+		\textbf{B}    & 2                                                                            & 2                                                                              & 2                                                                     & 4                                                                      & 1                                                                      \\ \hline
+	\end{tabular}
+\end{table}
+
+\textbf{5) Descreva as diferenças entre interface, interação e a affordance, citando exemplos em todos os casos. (SCORE: 0,5)}
+
+Interação: Capacidade do sistema em dar uma resposta ao usuário, E ao mesmo tempo o usuário da uma resposta ao sistema.
+
+Ex: Programas armazenados em fita k7, ligar o computador em um televisor.
+
+Interface: Meio lógico do qual um ou mais dispositivos ou sistemas incompatíveis conseguem comunicar-se entre si.
+
+Ex:  Sistema Operacional.
+Affordance:  é  é um elemento de interação como um botão, link que fala por si ou da ideia da ação que gera
+Ex: os botões com nomes suscetíveis ou seja passa a ideia do que fazer como o botão para fazer o login no facebook no botão esta escrito "entrar"
+
+\textbf{6) Dois outros critérios de apontados pela IHC (Interação Humano Computador) que auxiliam a análise da qualidade de uso de um sistema são a Acessibilidade e a Comunicabilidade. Faça uma descrição detalhada esses dois aspectos. (SCORE: 1,0)}
+
+Acessibilidade: Ausência de empecilho, a fim de que o usuário possa utilizar o sistema, estando esse usuário com limitações ou não,sendo assim o usuário pode desfrutar desse sistema.
+
+Comunicabilidade: Habilidade do designer em mostrar as funções do sistema , o que o sistema pode fazer, qual a utilidade de usar a ferramenta e suas consequências.
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{abntex2-modelo-references}
+
+\end{document}
