@@ -1,0 +1,27 @@
+\changetocdepth {3}
+\select@language {brazil}
+\contentsline {chapter}{Sum\'ario}{2}{section*.1}
+\contentsline {section}{\numberline {1}Contexto}{3}{section.0.1}
+\contentsline {subsection}{\numberline {1.1}Contextualiza\IeC {\c c}\IeC {\~a}o do Projeto}{3}{subsection.0.1.1}
+\contentsline {subsection}{\numberline {1.2}Objetivos do Projeto}{3}{subsection.0.1.2}
+\contentsline {section}{\numberline {2}M\IeC {\'e}todos}{4}{section.0.2}
+\contentsline {subsection}{\numberline {2.1}Qual M\IeC {\'e}todo Ser\IeC {\'a} Empregado na Constru\IeC {\c c}\IeC {\~a}o}{4}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {2.2}Motodologia \IeC {\'a}gil}{5}{subsection.0.2.2}
+\contentsline {subsection}{\numberline {2.3}Qual o Motivo da Escolha}{5}{subsection.0.2.3}
+\contentsline {section}{\numberline {3}An\IeC {\'a}lise de Riscos}{6}{section.0.3}
+\contentsline {subsection}{\numberline {3.1}A Identifica\IeC {\c c}\IeC {\~a}o dos Risco }{6}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {3.2}Proje\IeC {\c c}\IeC {\~a}o dos Riscos}{6}{subsection.0.3.2}
+\contentsline {subsection}{\numberline {3.3}Avalia\IeC {\c c}\IeC {\~a}o dos Riscos}{6}{subsection.0.3.3}
+\contentsline {subsection}{\numberline {3.4}Administra\IeC {\c c}\IeC {\~a}o e Monitora\IeC {\c c}\IeC {\~a}o dos Riscos}{6}{subsection.0.3.4}
+\contentsline {section}{\numberline {4}Cronograma }{6}{section.0.4}
+\contentsline {subsection}{\numberline {4.1}Rela\IeC {\c c}\IeC {\~a}o Pessoa/Trabalho}{7}{subsection.0.4.1}
+\contentsline {subsection}{\numberline {4.2}Defini\IeC {\c c}\IeC {\~a}o de Tarefas}{7}{subsection.0.4.2}
+\contentsline {subsection}{\numberline {4.3}Rede de Tarefas}{8}{subsection.0.4.3}
+\contentsline {subsection}{\numberline {4.4}Distribui\IeC {\c c}\IeC {\~a}o de Esfor\IeC {\c c}os}{8}{subsection.0.4.4}
+\contentsline {subsection}{\numberline {4.5}Representa\IeC {\c c}\IeC {\~a}o do Cronograma}{8}{subsection.0.4.5}
+\contentsline {section}{\numberline {5}Planejamento Organizacional}{9}{section.0.5}
+\contentsline {section}{\numberline {6}Recursos Necess\IeC {\'a}rios}{9}{section.0.6}
+\contentsline {subsection}{\numberline {6.1}Pessoal}{9}{subsection.0.6.1}
+\contentsline {subsection}{\numberline {6.2}Software e Hardware}{9}{subsection.0.6.2}
+\contentsline {section}{\numberline {7}Mecanismos de Acompanhamento}{10}{section.0.7}
+\contentsline {chapter}{Refer\^encias}{11}{section*.3}

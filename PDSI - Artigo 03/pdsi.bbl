@@ -1,0 +1,24 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.2 }
+
+\bibitem[G1 2016]{g1}
+\abntrefinfo{G1}{G1}{2016}
+{G1. \emph{Mercado de TI é um dos setores que não pararam de contratar no
+  Brasil}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://g1.globo.com/jornal-da-globo/noticia/2016/02/mercado-de-ti-e-um-dos-setores-que-nao-pararam-de-contratar-no-brasil.html}.
+  Acesso em: 15.06.2017.}
+
+\bibitem[Gandra 2017]{smart}
+\abntrefinfo{Gandra}{GANDRA}{2017}
+{GANDRA, A. \emph{Smartphone se consolida como meio preferido de acesso à
+  internet, diz pesquisa}. 2017.
+Dispon{\'\i}vel em:
+  \url{http://agenciabrasil.ebc.com.br/geral/noticia/2017-02/sete-em-cada-dez-brasileiros-acessam-internet-e-elevam-uso-de-smartphone}.
+  Acesso em: 15.06.2017.}
+
+\end{thebibliography}
