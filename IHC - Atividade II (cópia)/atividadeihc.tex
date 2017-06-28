@@ -1,0 +1,237 @@
+% abtex2-modelo-artigo.tex, v-1.9.2 laurocesar
+% Copyright 2012-2014 by abnTeX2 group at http://abntex2.googlecode.com/ 
+%
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Artigo Acadêmico em conformidade com
+% ABNT NBR 6022:2003: Informação e documentação - Artigo em publicação 
+% periódica científica impressa - Apresentação
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+
+\documentclass[
+	% -- opções da classe memoir --
+	article,			% indica que é um artigo acadêmico
+	11pt,				% tamanho da fonte
+	oneside,			% para impressão apenas no verso. Oposto a twoside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE % títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	sumario=tradicional
+	]{abntex2}
+
+
+% ---
+% PACOTES
+% ---
+
+% ---
+% Pacotes fundamentais 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{nomencl} 			% Lista de simbolos
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+% ---
+		
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+		
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+% ---
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Atividade IV de Interação Humano-Computador}
+\autor{
+	Antônio F. de Carvalho$^{1}$, Diego F. Sousa Lima$^{1}$\\
+	Diego de S. Vasconcelos$^{1}$, Marcio Silvano$^{1}$
+	\\
+	$^{1}$Curso Bacharelado em Sistemas de Informação -- Universidade Federal do Piauí\\
+	\texttt{\{antonio007023, diegofernando5672\}@gmail.com}\\
+	\texttt{\{diegosousa.33, marcinho944\}@hotmail.com}
+}
+
+
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={Modelo de artigo científico com abnTeX2},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{atigo científico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ---
+% Altera as margens padrões
+% ---
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+% ---
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Espaçamento simples
+\SingleSpacing
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+
+% página de titulo
+\maketitle
+
+
+% resumo em português
+% ]  				% FIM DE ARTIGO EM DUAS COLUNAS
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
+
+Todas as questões foram respondidas baseadas em \citeonline{barbosa2010interaccao}.\\
+
+\textbf{1) \textit{O que é design.} Escolha uma situação cotidiana em que é preciso realizar uma atividade de design explorando a criatividade. Por exemplo, comprar uma roupa ou calçado, preparar uma refeição ou planejar as férias. Analise a situação escolhida, identificando o que geralmente é feito na:}
+
+\begin{itemize}
+	\item \textbf{análise da situação atual;}
+	\item \textbf{definição das necessidades e oportunidades de intervenção (i.e., do que é possível melhorar na situação analisada);}
+	\item \textbf{proposta de uma intervenção;}
+	\item \textbf{avaliação da intervenção.}
+\end{itemize}
+
+Tarefa: Estudar
+
+Na situação atual temos materiais de estudo, uma mesa de estudos, um carro de som do lado de fora, um filho chorando pedindo a mamadeira, e preguiça por parte do estudante.
+
+
+
+O estudante precisa de concentração ao máximo e também de ficar alerta.
+
+A proposta de intervenção é deixar a criaça com a mãe, ligar pra polícia reclamando da lei do silêncio e fazer um café.
+
+Podemos então avaliar o processo de mudanças como perfeito e o estudante agora poderá fazer sua maratona de estudos tranquilamente.
+
+Para resolver estas questões, poderia ser criado um software que medisse a quantidade de ruído no ambiente, no qual fizesse ações automaticamente, como um barulho para que o ambiente se atente a questão do silêncio.
+
+\textbf{2) \textbf{\textit{Processo de design de IHC}. Investigue um processo de design de IHC de um sistema interativo. Escolha um sistema a cuja documentação ou equipe de design você tenha acesso direto, ou ainda um sistema de software livre que disponibilize Interação Humano-Computador na Internet o material gerado durante seu processo de design de IHC. Por exemplo, investigue o processo de design do OpenOffice, do Mozilla Thunderbird, do KDE ou do GNOME. Identifique, descreva e ilustre:}}
+
+Sem resposta.
+
+
+\textbf{3) \textit{Processos de design de IHC}. Discuta as principais diferenças entre os processos de design de IHC descritos neste capítulo. Identifique características dos projetos que ajudam a tomar decisões sobre quais processos podem ou devem ser adotados.}
+
+De modo geral, as atividades de um processo de design de IHC envolvem a análise da situação atual, a identificação do que deve ou pode ser melhorado, a elaboração e a avaliação de uma intervenção nessa situação. As principais abordagens de integração de processos de IHC e ES(engenharia de software) são:
+definição de características de um processo de desenvolvimento que se preocupa com a qualidade de uso definição de processos de IHC paralelos que devem ser incorporados aos processos propostos pela ES indicação de pontos em processos propostos pela ES em que atividades e métodos de IHC podem ser inseridos.
+
+Não acho necessário ter um processo especifico para ser adotado pois acredito que todos são fundamentais e quanto a adoção deles estes vão ser analisados na criação de um projeto para ver qual se encaixa melhor no processo de criação de um software.
+
+No \textit{PowerPoint 2013}, o Designer ao criar a opção \textit{"Novo Slide"} deixa bem claro ao usuário que ao clicar naquela opção será criado um novo \textit{slide} e ao colocar o cursor do \textit{mouse} sobre a opção é exibido uma mensagem informando ao usuário que será inserido um novo \textit{slide} na área de apresentação e ainda informa o atalho para que da próxima vez o mesmo possa criar um \textit{slide} sem precisar clicar de novo no botão. O \textit{Designer} preocupou-se também em criar juntamente com a opção uma outra opção para que o usuário possa definir o \textit{layout} de seus slides informando o tipo de \textit{layout} e mostrando uma imagem para o usuário visualizar como funciona o layout escolhido.
+
+\textbf{4) Conhecimento de IHC envolvido nos processos de design. Identifique quais conhecimentos de IHC precisam ser adquiridos por equipes de desenvolvimento para desempenhar atividades de IHC voltadas à qualidade de uso do sistema sendo projetado.}
+
+Sem resposta
+
+\textbf{5) \textit{Integração das atividades de IHC com engenharia de software}. Investigue alguma experiência de integrar atividades de IHC com atividades de ES, seja em um processo ágil ou não. Você pode conversar com colegas que tenham participado de iniciativas desse tipo ou ler relatos de iniciativas do gênero. Analise e discuta os pontos positivos e negativos da experiência de integração investigada.}
+
+Realizando uma pesquisa sobre a integração das atividades de IHC com engenharia de software, foi encontrado uma experiência de desenvolvimento de software utilizando tal técnica, o software desenvolvido foi o CatalóG que tem como objetivo mapear os diferentes estudos realizados pela comunidade científica nacional na área de estudos de gênero e feministas nos últimos 20 anos.
+
+O software CatalóG foi construído com base no modelo evolucionário, especificamente a prototipação, onde no caso os desenvolvedores entregavam protótipos com técnicas de IHC aplicadas com intuito de promover uma experiência inicial de uso aos usuários. Esse processo foi seguido pelos desenvolvedores do CatalóG, para oferecer como resultado final além das funcionalidades requeridas, um software interativo e margem de erros próxima ao zero.
+
+De acordo com o autor, mesmo possuindo algumas dificuldades na integração das duas área como por exemplo a necessidade de uma boa comunicação entre os especialistas das duas áreas durante o desenvolvimento do sistema, mas  utilização do modelo de prototipação atrelado à prática de design participativo trouxe benefícios tanto para os usuários do software quanto para os desenvolvedores. Em relação aos usuários, essas práticas proporcionaram maior grau de envolvimento no processo de desenvolvimento do software, possibilitando assim a construção de um software de acordo com suas necessidades. Com relação ao desenvolvimento, essas práticas possibilitaram maior compreensão dos requisitos por parte dos desenvolvedores, além de permitir testes constantes sempre que uma funcionalidade é disponibilizada. 
+
+\textbf{6) \textit{Inserção de atividades de IHC em processos de desenvolvimento de software}. Considerando um processo de desenvolvimento de software de que você tenha participado, identifique os pontos desse processo em que uma ou mais atividades de IHC voltadas à qualidade de uso poderiam ser realizadas.}
+
+Várias coisas podem ser alteradas. Em relação primeiramente ao processo de design. Certamente depois de estudar os conceitos da IHC. As coisas podem ser melhor desenvolvidas.
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{abntex2-modelo-references}
+
+\end{document}

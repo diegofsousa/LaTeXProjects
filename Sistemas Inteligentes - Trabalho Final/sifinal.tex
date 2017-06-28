@@ -1,0 +1,315 @@
+% abtex2-modelo-artigo.tex, v-1.9.2 laurocesar
+% Copyright 2012-2014 by abnTeX2 group at http://abntex2.googlecode.com/ 
+%
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Artigo Acadêmico em conformidade com
+% ABNT NBR 6022:2003: Informação e documentação - Artigo em publicação 
+% periódica científica impressa - Apresentação
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+
+
+
+\documentclass[
+	% -- opções da classe memoir --
+	article,			% indica que é um artigo acadêmico
+	11pt,				% tamanho da fonte
+	oneside,			% para impressão apenas no verso. Oposto a twoside
+	a4paper,			% tamanho do papel. 
+	english,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	sumario=tradicional
+	]{abntex2}
+
+
+% ---
+% PACOTES
+% ---
+
+% ---
+% Pacotes fundamentais 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{nomencl} 			% Lista de simbolos
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{listings}
+
+% ---
+		
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+		
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+% ---
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Treinamento de Redes Neurais Artificiais para a base de dados \textit{Vehicle Silhouettes}}
+
+\autor{
+Diego F. de Sousa$^{1}$, Bruno L. de Alcântara$^{1}$\\
+\\
+$^{1}$Curso Bacharelado em Sistemas de Informação -- Universidade Federal do Piauí\\
+\texttt{\{diegofernando5672, brunolopes.ips\}@gmail.com}
+\\\\\\\\\\\\\\\\\\\\
+O objetivo geral deste trabalho é documentar todo \\
+o processo de treinamento da base de dados \textit{Vehicle Silhouettes}\\ para a disciplina de Sistemas Inteligentes sob a  \\ orientação da professora Heloina Alves Arnaldo \\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={Modelo de artigo científico com abnTeX2},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{atigo científico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ---
+% Altera as margens padrões
+% ---
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+% ---
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Espaçamento simples
+\SingleSpacing
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+
+% página de titulo
+\maketitle
+\tableofcontents
+\newpage 
+
+
+% ]  				% FIM DE ARTIGO EM DUAS COLUNAS
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
+
+\section{Introdução}
+
+Durante a disciplina de Sistemas Inteligentes vários aspectos da Inteligência Artificial foram estudados. O estudo de abordagens como: busca por melhor caminho, métodos de aprendizagem de máquina, agentes inteligentes e toda a teoria composta desde os primórdios da humanidade até os dias atuais fizeram-se agregadores para a integridade do conhecimento que vem sendo obtido ao longo do curso de Sistemas de Informação. Com intuito de enriquecer o conhecimento obtido dentre a metodologia da matéria, nos foi proposto uma forma de avaliação no qual temos como objetivo treinar uma Rede Neural Artificial. Como ferramenta de treinamento utilizamos o software WEKA, que além de ter distribuição gratuita, tem em sua composição vários algoritmos e abordagens para uso.
+
+O presente relatório contempla uma introdução sobre os conceitos da aprendizagem de máquina e Redes Neurais Artificiais. Além disso, informações sobre a base de dados e as ferramentas utilizadas são detalhados juntamente com os resultados obtidos.
+
+\subsection{Aprendizado de Máquina}
+
+Pesquisas de Aprendizado de Máquina estudam o desenvolvimento de métodos capazes de extrair conceitos (conhecimento) a partir de amostras de dados. Existem diversos algoritmos de Aprendizado de Máquina cujo intuito é permitir que, após um determinado treinamento com um certo conjunto de dados cujas instâncias têm classificação conhecida, uma máquina seja capaz de interpretar novos dados e classificá-los de maneira apropriada a partir de uma generalização do que lhe foi apresentado anteriormente. Alguns algoritmos de Aprendizagem de Máquina têm como inspiração os sistemas biológicos (como as RNAs e os Algoritmos Genéticos), os processos cognitivos (Raciocínio Baseado em Casos), o aprendizado simbólico (Árvores de Decisão) e as Teorias Estatísticas (SVMs).
+
+\subsection{Redes Neurais Artificiais}
+
+As Redes Neurais Artificiais (RNAs) empregam um modelo matemático inspirado na estrutura neural dos seres vivos, adquirindo conhecimento por meio da experiência. Elas são constituídas por um conjunto de nodos, que simulam o papel dos neurônios, conectados por uma regra de propagação. Cada nodo recebe suas entradas com os pesos associados, vindos de outros nodos, ou de um estímulo externo. A camada de entrada possui um nodo especial, chamando de bias, que serve para aumentar os graus de liberdade, permitindo uma melhor adaptação da rede ao conhecimento a ela fornecido. Sobre estas entradas é aplicada uma função de ativação, que utiliza como argumento, usualmente, uma somatória ponderada das entradas da rede. O estado de ativação de um nodo é determinado pela função de ativação, geralmente uma função sigmoidal ou uma função degrau (\textit{Hard Limiter}).
+
+\subsubsection{\textit{MultiLayer Perceptron} (Perceptrons de múltiplas camadas)}
+
+A MLP consiste em uma rede fortemente conectada com conexões \textit{feedfoward}. Ou seja, é uma rede em que as camadas estão organizadas em uma ordem e os neurônios de uma camada estimulam todos os neurônios da camada seguinte (fortemente conectada), com exceção da primeira, em que os sinais de entrada são as próprias entradas da rede. Nenhum neurônio pode estimular um neurônio da mesma camada ou de camadas anteriores (\textit{feedfoward}), Na fase de treinamento há a determinação e a correção dos pesos e dos \textit{bias}.
+
+Algumas fórmulas são estritamente relevantes em um modelo \textit{MultiLayer Perceptron}. primeiramente temos a combinação linear. Este significa a soma dos valores de entrada $(x1 * w1 +  x2 * w2  +  ...  +  xn * wn )$, gerando o potencial de ativação U.
+
+\[ u = \sum_{i=1}^{N} Wi * Xi - \theta \]
+
+
+Uma rede MLP possui as seguintes camadas:
+
+\begin{itemize}
+	\item\textbf{Uma camada de entrada}: consiste em uma camada com os sinais de entrada (estímulo da rede). Esta camada não possui neurônios;
+	\item \textbf{Uma camada de saída}: consiste em uma camada de neurônios que geram a saída da rede (resposta da rede a um estímulo);
+	\item \textbf{Camadas escondidas ou intermediárias}: qualquer camada que se encontre entre a camada de entrada e saída. Não existe limites para quantidade de camadas escondidas, e também não é obrigatória a existência delas.
+\end{itemize}
+
+\subsection{\textit{Waikato Environment for Knowledge Analysis} (WEKA)}
+
+WEKA é uma coleção de algoritmos de aprendizado de máquina para tarefas de mineração de dados. Os seus algoritmos podem ser aplicados diretamente em arranjos de dados ou chamados  internamente em códigos Java. WEKA contém ferramentas para pré-processamento, classificação, regressão, agrupamento, regras de associação e visualização de dados, além de ser igualmente viável para desenvolvimento de novas metodologias de aprendizagem de máquina.
+
+\section{Descrição do experimento}
+
+O experimento deste documento faz a utilização da ferramenta WEKA a fim de fazer a análise, efetuar o treinamento aplicando as Redes Neurais Artificiais e obter os dados relativos ao respectivo treinamento sobre uma base de dados. Para conseguir resultados que possam ser relevantes aos experimentos, foram feitas modificações nos principais parâmetros de funcionamento da rede. Dentre estes estão:
+
+\begin{enumerate}
+	\item Número de iterações;
+	\item Quantidade de camadas intermediárias de neurônios;
+	\item Taxa de aprendizado.
+\end{enumerate}
+
+Após cada modificação, os resultados obtidos foram avaliados para que se pudesse determinar os efeitos da mudança de acordo com a variedade de atributos e classes da base de dados.
+
+\section{Base de Dados \textit{Vehicle Silhouettes} (Silhuetas de Veículos)}
+
+Estes dados foram originalmente reunidos na TI em 1986-87 por JP. Siebert parcialmente financiados por Barr e Stroud Ltd. O objetivo original era encontrar um método para distinguir objetos 3D dentro de uma imagem 2D pela aplicação de um conjunto de extrator de características de forma às silhuetas 2D dos objetos. As medidas dos recursos que foram extraídas de exemplos de silhuetas de objetos a serem discriminados foram usadas para gerar uma árvore de regras de classificação por meio da indução do computador. Esta estratégia de reconhecimento de objetos foi usada com sucesso para discriminar silhuetas de carros modelo, vans e ônibus vistos a partir de elevação restrita, mas todos os ângulos de rotação. O desempenho da classificação da árvore de regras comparou favoravelmente aos classificadores estatísticos MDC (\textit{Minimum Distance Classifier}) e k-NN (\textit{k-Nearest Neighbour}) em termos de taxa de erro e eficiência computacional. Uma investigação dessas árvores de regra geradas pelo exemplo indicou que a estrutura da árvore foi fortemente influenciada pela orientação dos objetos e agrupava as vistas de objetos diferentes em decisões únicas.
+
+Utilizaram-se os veículos modelo "\textit{Corgie}" para o experimento: um ônibus de dois andares, \textit{Cheverolet van}, \textit{Saab 9000} e um \textit{Opel Manta 400}. Esta combinação particular de veículos foi escolhida com a expectativa de que o ônibus, van e qualquer um dos carros seriam facilmente distinguíveis, mas seria mais difícil distinguir entre os carros.
+
+As imagens foram adquiridas por uma câmera olhando para baixo no veículo modelo de um ângulo de elevação fixo (34,2 graus para a horizontal). Os veículos foram colocados sobre uma superfície retroiluminada difusa (\textit{lightbox}). Os veículos foram pintados de preto fosco para minimizar os destaques. As imagens foram capturadas usando um \textit{framestore CRS4000} conectado a um \textit{vax 750}. Todas as imagens foram capturadas com uma resolução espacial de 128x128 \textit{pixels} quantificada em 64 níveis.
+
+A base de dados é formada por 946 amostras divididas em 4 classes, com 18 atributos. Cada elemento da base representa um veículo, onde seus atributos são valores de suas silhuetas, retirados de ângulos diferentes. Na Tabela \ref{test} estão todos os testes realizados.
+
+\section{Experimento e Resultados}
+
+Para o treinamento da base de dados foram relacionados alguns valores para a aplicação real da rede para que se visualizasse seus impactos nos resultados obtidos. Alguns parâmetros fazer efeitos notáveis no treinamento da rede. Como exemplo, temos a quantidade de camadas intermediárias de neurônios, pois estes impactam visivelmente as projeções da rede. 
+
+Para efeito de testes foram usados parâmetros da tabela \ref{val}.
+
+\begin{table}[h]
+	\centering
+	\caption{Valores testados}
+	\label{val}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		a = 11                & taxa = 0.3                  & it = 500                  \\ \hline
+		n \textless a = 4     & taxa \textless 0.3 = 0.1    & it \textless 500 = 160    \\ \hline
+		n \textgreater a = 18 & taxa \textgreater 0.3 = 0.7 & it \textgreater 500 = 830 \\ \hline
+	\end{tabular}
+\end{table}
+
+O calculo para a projeção foi feito seguindo a fórmula: na + nc/2, sendo na o número de atributos e nc o número de classes contidas na base de dados.
+
+Na Tabela \ref{test} estão representados todos os testes realizados para a base de dados.
+
+\begin{table}[h]
+	\centering
+	\caption{Bateria de testes}
+	\label{test}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Nº & \begin{tabular}{c}Iterações\end{tabular}           & \begin{tabular}{c}Neurônios\end{tabular}       & \begin{tabular}{c}T. de aprendizado\end{tabular}      & \begin{tabular}{c}Acerto (\%)\end{tabular} & \begin{tabular}{c}Erro (\%) \end{tabular} \\ \hline
+		1  &                           & 11 (a)                &                          & 95.962                     & 4.038                    \\ \hline
+		2  &                           & 4 (N \textless a)     & 0.3 (Padrão)             & 83.1354                    & 16.8646                  \\ \hline
+		3  &                           & 18 (N \textgreater a) &                          & 95.7245                    & 4.2755                   \\ \hline
+		4  &                           & 11 (a)                &                          & 93.3492                    & 6.6508                   \\ \hline
+		5  & 500                       & 4 (N \textless a)     & 0.1 (A \textless 0.3)    & 83.3729                    & 16.6271                  \\ \hline
+		6  &                           & 18 (N \textgreater a) &                          & 95.2494                    & 4.7506                   \\ \hline
+		7  &                           & 11 (a)                &                          & 94.5368                    & 5.4632                   \\ \hline
+		8  &                           & 4 (N \textless a)     & 0.7 (A \textgreater 0.3) & 81.7102                    & 18.2898                  \\ \hline
+		9  &                           & 18 (N \textgreater a) &                          & 98.5748                    & 1.4252                   \\ \hline
+		10 &                           & 11 (a)                &                          & 92.1615                    & 7.8385                   \\ \hline
+		11 &                           & 4 (N \textless a)     & 0.1 (Padrão)             & 80.5226                    & 19.4774                  \\ \hline
+		12 &                           & 18 (N \textgreater a) &                          & 92.6366                    & 7.3634                   \\ \hline
+		13 &                           & 11 (a)                &                          & 84.7981                    & 15.2019                  \\ \hline
+		14 & 160 (It \textless 500)    & 4 (N \textgreater a)  & 0.1 (A \textless 0.3)    & 80.0475                    & 19.9525                  \\ \hline
+		15 &                           & 18 (N \textgreater a) &                          & 85.9857                    & 14.0143                  \\ \hline
+		16 &                           & 11 (a)                &                          & 91.4489                    & 8.5511                   \\ \hline
+		17 &                           & 4 (N \textless a)     & 0.7 (A \textgreater 0.3) & 79.3349                    & 20.6651                  \\ \hline
+		18 &                           & 18 (N \textgreater a) &                          & 91.6865                    & 8.3135                   \\ \hline
+		19 &                           & 11 (a)                &                          & 96.6746                    & 3.3254                   \\ \hline
+		20 &                           & 4 (N \textless a)     & 0.3 (Padrão)             & 86.2233                    & 13.7767                  \\ \hline
+		21 &                           & 18 (N \textless a)    &                          & 97.3872                    & 2.6128                   \\ \hline
+		22 &                           & 11 (a)                &                          & 95.2494                    & 4.7506                   \\ \hline
+		23 & 830 (It \textgreater 500) & 4 (N \textless a)     & 0.1 (A \textless 0.3)    & 84.0855                    & 15.9145                  \\ \hline
+		24 &                           & 18 (N \textgreater a) &                          & 97.1496                    & 2.8504                   \\ \hline
+		25 &                           & 11 (a)                &                          & 97.1496                    & 2.8504                   \\ \hline
+		26 &                           & 4 (N \textless a)     & 0.7 (A \textgreater 0.3) & 83.848                     & 16.152                   \\ \hline
+		27 &                           & 18 (N \textgreater a) &                          & 98.8124                    & 1.1876                   \\ \hline
+	\end{tabular}
+\end{table}
+
+Através da análise mais detalhada da tabela, destacam-se alguns resultados em cinza por terem mostrado dentre os demais os piores números observáveis, o que se justifica principalmente por parâmetros excessivamente baixos (Teste nº 2) ou por combinações discrepantes entre estes parâmetros (Teste nº 14). Além disso, pode-se observar a carência de um número razoável de iterações e camadas intermediárias de neurônios associado à uma taxa de aprendizagem ligeiramente abaixo do valor padrão para a obtenção do melhor resultado (Teste nº 24).
+
+\section{Conclusão}
+
+Com a observação dos resultados em cada um dos parâmetros estabelecidos, pode-se concluir que os melhores valores para esta amostra de dados foram obtidos com um número alto de neurônios intermediários e iterações e um valor mediano para a taxa de aprendizagem, o que nos direciona à testes com diferentes coleções para determinar a grande valia e possível utilização de valores similares como padrão. Com isso, restam apenas agradecimentos à Docente pela oportunidade e convicção acerca da necessidade crescente de estudos sobre o assunto. 
+
+
+
+
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\newpage
+\bibliography{abntex2-modelo-references}
+
+\newpage 
+\appendix
+\chapter{Dados gerados pelo WEKA}
+
+ANEXO A – (Externo) Pasta compactada com os arquivos gerados durante o processo de treino e teste da Rede Neural Artificial referenciados pelos números dos testes na tabela de parâmetros, sendo que cada um dos números contém o resultado de treinamento e logo em seguida (dentro do mesmo bloco) contém o resultado usando teste da Rede Neural Artificial.
+
+\end{document}
