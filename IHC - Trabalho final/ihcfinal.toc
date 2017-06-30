@@ -1,0 +1,46 @@
+\changetocdepth {4}
+\select@language {brazil}
+\select@language {brazil}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{Introdu\IeC {\c c}\IeC {\~a}o}{5}{chapter*.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Perspectiva da intera\IeC {\c c}\IeC {\~a}o}}{6}{chapter.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Perspectiva de interface}}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Contato F\IeC {\'I}SICO}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Contato CONCEITUAL}{7}{section.2.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Perspectiva de \textit {affordance}}}{8}{chapter.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Perspectiva da qualidade}}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}Usabilidade e experi\IeC {\^e}ncia do usu\IeC {\'a}rio}{9}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Facilidade de aprendizado}{9}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Facilidade de recorda\IeC {\c c}\IeC {\~a}o}{9}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Efici\IeC {\^e}ncia}{9}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Seguran\IeC {\c c}a do uso}{10}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Satisfa\IeC {\c c}\IeC {\~a}o do usu\IeC {\'a}rio}{10}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Acessibilidade}{10}{section.4.2}
+\contentsline {section}{\numberline {4.3}Comunicabilidade}{10}{section.4.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Perspectiva dos princ\IeC {\'\i }pios de \textit {Gestalt}}}{11}{chapter.5}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Percep\IeC {\c c}\IeC {\~a}o de cores}}{12}{chapter.6}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {An\IeC {\'a}lise segundo a Engenharia Cognitiva}}{13}{chapter.7}
+\contentsline {section}{\numberline {7.1}Problemas de mapeamento}{13}{section.7.1}
+\contentsline {section}{\numberline {7.2}Dificuldade de controle}{13}{section.7.2}
+\contentsline {section}{\numberline {7.3}Dificuldade de avalia\IeC {\c c}\IeC {\~a}o}{13}{section.7.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase {Perspectiva de design: habilidades do designer}}{14}{chapter.8}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {9}\MakeTextUppercase {Coleta de dados: identifica\IeC {\c c}\IeC {\~a}o das necessidades dos usu\IeC {\'a}rios}}{15}{chapter.9}
+\vspace {\cftbeforechapterskip }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{Conclus\IeC {\~a}o}{18}{chapter*.4}
+\vspace {\cftbeforechapterskip }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{Refer\^encias}{19}{section*.7}
+\vspace {\cftbeforechapterskip }

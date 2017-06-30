@@ -1,0 +1,30 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.2 }
+
+\bibitem[Hix e Hartson 1993]{hix}
+\abntrefinfo{Hix e Hartson}{HIX; HARTSON}{1993}
+{HIX, D.; HARTSON, H.~R. \emph{Developing user interfaces: ensuring usability
+  through product \& process}. [S.l.]: John Wiley \& Sons, Inc., 1993.}
+
+\bibitem[Moran 1981]{moran}
+\abntrefinfo{Moran}{MORAN}{1981}
+{MORAN, T.~P. The command language grammar: A representation for the user
+  interface of interactive computer systems.
+\emph{International journal of man-machine studies}, Elsevier, v.~15, n.~1, p.
+  3--50, 1981.}
+
+\bibitem[Nielsen 1994]{nielsen}
+\abntrefinfo{Nielsen}{NIELSEN}{1994}
+{NIELSEN, J. \emph{Usability engineering}. [S.l.]: Elsevier, 1994.}
+
+\bibitem[Sharp, Rogers e Preece 2007]{sharp}
+\abntrefinfo{Sharp, Rogers e Preece}{SHARP; ROGERS; PREECE}{2007}
+{SHARP, H.; ROGERS, Y.; PREECE, J. Interaction design: beyond human-computer
+  interaction.
+Wiley, 2007.}
+
+\end{thebibliography}
